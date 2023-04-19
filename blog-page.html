@@ -20,7 +20,7 @@
         <div class="navbar">
           <ul class="navbar__list-left">
             <li class="navbar__item">
-              <a href="./index.html" class="navbar__link">soudemy</a>
+              <a href="#" class="navbar__link">soudemy</a>
             </li>
             <li class="navbar__item">
               <a href="./index.html" class="navbar__link">Home</a>
@@ -52,9 +52,58 @@
               </buttom>
             </li>
             <li class="navbar__item">
-              <buttom class="navbar__btn">
-                <i class="fa-thin fa-bars"></i>
+              <buttom class="navbar__btn btn-user">
+                <i class="fa-light fa-user"></i>
               </buttom>
+              <div class="register-form">
+                <input type="checkbox" id="chk" aria-hidden="true" />
+                <button class="btn-exit">
+                  <i class="fa-light fa-circle-xmark"></i>
+                </button>
+                <div class="signup">
+                  <form>
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input
+                      type="text"
+                      name="txt"
+                      placeholder="User name"
+                      required=""
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required=""
+                    />
+                    <input
+                      type="password"
+                      name="pswd"
+                      placeholder="Password"
+                      required=""
+                    />
+                    <button>Sign up</button>
+                  </form>
+                </div>
+
+                <div class="login">
+                  <form>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required=""
+                    />
+                    <input
+                      type="password"
+                      name="pswd"
+                      placeholder="Password"
+                      required=""
+                    />
+                    <button>Login</button>
+                  </form>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -308,5 +357,8 @@
         </ul>
       </section>
     </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/js.js"></script>
   </body>
 </html>
