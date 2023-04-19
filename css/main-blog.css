@@ -1,0 +1,140 @@
+/* #main{
+    padding: 50px 99px;
+} */
+/* start css blog boder */
+.blog_boder{
+    display: flex;
+    justify-content: space-around;
+}
+.blog_boder_left{
+    width: 70%;
+}
+/* start css blog card */
+.blog_card{
+    margin-bottom: 50px;
+}
+/* .blog_card_header{
+    
+} */
+.blog_card_header img{
+    width: 100%;
+    height: auto;
+}
+.blog_card_infonation{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infonation_date,
+.infonation_by,
+.infonation_name_tag,
+.btn_like,
+.comment{
+    padding: 0 .5rem;
+    color: #898989;
+    border-right: 1px solid #898989;
+}
+.btn_like-heart,
+.btn_commnent{
+    font-size: 18px;
+    color: #898989;
+    border: none;
+    background: none;
+}
+.comment{
+    border: none;
+}
+.blog_card_footer{
+    padding: 16px 0;
+}
+.card_title{
+    font-size: 24px;
+    color: #2D2D2D;
+}
+.card_content{
+    font-size: 16px;
+    color: #898989;
+    margin: 16px 0;
+}
+.card_link{
+    color: #2F2D2D;
+    text-decoration: underline;
+}
+/* end */
+
+/* start css blog card filter */
+.blog_bar-filter{
+    width: 22%;
+}
+.category_bar_search{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+}
+.blog_bar_suggestion{
+    margin: 1rem 0;
+}
+.blog_bar_suggestion img{
+    width: 100%;
+}
+.suggestion__title,
+.sub__list__content{
+    font-size: 16px;
+}
+.suggestion_title{
+    margin: .5rem 0;
+}
+.category_bar_search input{
+    padding: 15px 13px;
+    border: none;
+    outline: none;
+}
+.btn_search_category{
+    font-size: 20px;
+    border: none;
+    background: none;
+    padding: 0 13px;
+    cursor: pointer;
+}
+.blog_boder_pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pagination{
+    display: flex;
+}
+.pagination_link{
+    padding: 10px;
+    color: #000000;
+}
+
+.category_fil_title{
+    font-weight: 900;
+}
+.category_fil_title,
+.criterria{
+    font-size: 18px;
+    padding: 10px 0;
+}
+.criterria,
+.tag_link{
+    color: #898989;
+}
+.tag_link{
+    text-decoration: underline;
+}
+.category_bar-filter_footer{
+    border-top: 4px solid #000000 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.category_bar_btn_filter{
+    padding: 10px 26px;
+    color: whitesmoke;
+    background-color: #393939;
+    cursor: pointer;
+}
+/* end */

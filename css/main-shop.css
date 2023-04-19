@@ -1,0 +1,112 @@
+#main .container{
+    /* padding: 50px 99px; */
+    display: flex;
+    justify-content: space-between;
+}
+/* start css category list left */
+.category{
+    width: 75%;
+}
+.category_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.category_title-fil::after{
+    font-family: Fontawesome;
+    content: "\f078";
+    margin: 0 .5rem;
+}
+.category_body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.category_item{
+    width: calc(98%/3);
+    text-align: center;
+    color: #393939;
+    margin: .5rem 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+.category_item img{
+    width: 100%;
+    height: auto;
+}
+.item_evaluate{
+    display: flex;
+    justify-content: center;
+    margin: .25rem 0;
+}
+.category_item:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.category_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pagination{
+    display: flex;
+}
+.pagination_link{
+    padding: 10px;
+    color: #000000;
+}
+.pagination_link_view-all{
+    color: #6B6B6B;
+}
+/* end */
+
+/* start css category filter */
+.category_bar-filter{
+    width: 22%;
+    /* margin-left: 50px; */
+}
+.category_bar_search{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+.category_bar_search input{
+    padding: 15px 13px;
+    border: none;
+}
+.btn_search_category{
+    font-size: 20px;
+    border: none;
+    background: none;
+    padding: 0 13px;
+}
+
+.category_fil_title{
+    font-weight: 900;
+}
+.category_fil_title,
+.criterria{
+    font-size: 18px;
+    padding: 15px;
+}
+.category_bar-filter_footer{
+    border-top: 4px solid #000000 ;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    
+}
+.category_bar_criteria-price{
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+.category_bar_btn_filter{
+    padding: 10px 26px;
+    color: whitesmoke;
+    background-color: #393939;
+    cursor: pointer;
+}
+/* end */
