@@ -4,6 +4,7 @@
 /* start css banner */
 .about_banner{
     width: 100%;
+    margin-top: 80px;
     position: relative;
 }
 .about_banner img{
