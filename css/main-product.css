@@ -88,6 +88,9 @@
     background-color: #393939;
     cursor: pointer;
 }
+.btn_oder_product:hover{
+    opacity: .8;
+}
 .add_to_wishlist{
     font-size: 18px;
     display: flex;
@@ -95,10 +98,14 @@
     margin: 33px 0;
 }
 .btn_add_wishlist{
+    color: #A3A3A3;
     font-size: 20px;
     border: none;
     background: none;
     cursor: pointer;
+}
+.btn_add_wishlist-active{
+    color: #FF6666;
 }
 .properties{
     font-size: 18px;

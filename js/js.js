@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
     $(".register-form").hide();
   });
 
-  // slider banner
+  //======================= slider banner =====================================
   let sliderList = $(".slider .list-item");
   let item = $(".slider .list-item .slider-item");
   let next = $(".gr__btn-slider .next__left");
@@ -143,25 +143,30 @@ jQuery(document).ready(function ($) {
     loadItem();
   }
 
-  // search function
+  //================================= search function======================================
+  function fillItem(val) {
+    list.each(function () {
+      // hàm each() thực hiện khối lệnh sau mỗi lần chạy
+      let content = $(this).text();
+      if (content.includes(val)) {
+        // hàm includes() dùng để tìm kiếm phần tử thỏa mãn
+        $(this).show(); // nếu thỏa mãn trả về true => Hiện phẩn tử lên màn hình
+      } else {
+        $(this).hide(); // ngược lại trả về false => Ẩn phần tử
+      }
+      if (val == "") {
+        // nếu biến val nhận ký tự rỗng thì load lại trang
+        loadItem();
+      }
+    });
+  }
+
+  // function search
   function searchItem() {
     // on("keyup") => nhận giá trị từ bàn phím
     $(".category_bar_search input").on("keyup", function () {
       let val = $(this).val(); // gán giá trị nhập từ bần phím vào biến
-      list.each(function () {
-        // hàm each() thực hiện khối lệnh sau mỗi lần chạy
-        let content = $(this).text();
-        if (content.includes(val)) {
-          // hàm includes() dùng để tìm kiếm phần tử thỏa mãn
-          $(this).show(); // nếu thỏa mãn trả về true => Hiện phẩn tử lên màn hình
-        } else {
-          $(this).hide(); // ngược lại trả về false => Ẩn phần tử
-        }
-        if (val == "") {
-          // nếu biến val nhận ký tự rỗng thì load lại trang
-          loadItem();
-        }
-      });
+      fillItem(val);
     });
   }
   searchItem();
@@ -172,22 +177,39 @@ jQuery(document).ready(function ($) {
     let fill = $(".category_bar_criteria-price");
     btnFill.on("click", function () {
       let val = fill.val();
-      list.each(function () {
-        // hàm each() thực hiện khối lệnh sau mỗi lần chạy
-        let content = $(this).text();
-        // console.log(content);
-        if (content.includes(val)) {
-          // hàm includes() dùng để tìm kiếm phần tử thỏa mãn
-          $(this).show(); // nếu thỏa mãn trả về true => Hiện phẩn tử lên màn hình
-        } else {
-          $(this).hide(); // ngược lại trả về false => Ẩn phần tử
-        }
-        if (val == "") {
-          // nếu biến val nhận ký tự rỗng thì load lại trang
-          loadItem();
-        }
-      });
+      fillItem(val);
     });
   }
   filPrice();
 });
+
+//================================Add to cart====================================
+function countItemAdd() {
+  let count = 1; // khởi tạo biến count = 1
+  let btnAdd = $(".add_amount .add_item"); // gọi nút thêm item
+  let btnMinus = $(".add_amount .minus_item"); // gọi nút giảm item
+  let oddContent = $(".add_amount .amount_item"); // lấy thẻ chứa nội dung số lượng item
+  btnAdd.on("click", function () {
+    // tạo sự kiện click nút thêm
+    count++; // count tăng 1 đơn vị
+    let newContent = `<span>${count}</span>`; // gán lại biên count vào cấu trúc html mới
+    oddContent.html(newContent); // gán lại vào cấu trức html cũ
+  });
+  btnMinus.on("click", function () {
+    // tạo sự kiện click nút giảm
+    count--;
+    if (count < 1) {
+      // nếu count < 1 thì gán lại count = 1 để giá trị không bị trừ âm
+      count = 1;
+    }
+    let newContent = `<span>${count}</span>`;
+    oddContent.html(newContent);
+  });
+}
+countItemAdd();
+
+$(".add_to_wishlist .btn_add_wishlist").on("click", function () {
+  $(this).toggleClass("btn_add_wishlist-active");
+});
+
+function addCart() {}
