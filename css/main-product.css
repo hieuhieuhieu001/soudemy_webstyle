@@ -135,7 +135,7 @@
 
 /* start css related product */
 .related_product{
-    margin-top: 80px;
+    margin: 80px 0;
 }
 .related_header{
     display: flex;
@@ -155,13 +155,14 @@
     cursor: pointer;
 }
 .related_list{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
     flex-wrap: wrap;
 }
 .related_item{
-    width: calc(98%/4);
-    text-align: center;
+    /*width: calc(98%/4);
+    */text-align: center;
     color: #393939;
     overflow: hidden;
     border-radius: 5px;
@@ -170,6 +171,11 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     padding-bottom: 20px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
 }
 .related_item img{
     width: 100%;
