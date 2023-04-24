@@ -21,7 +21,10 @@ jQuery(document).ready(function ($) {
     let checkLeft = item[count].offsetLeft;
     // offsetLeft đo vị trí của cạnh bên trái với lề
     sliderList.css("left", -checkLeft + "px");
-    clearTimeout(refeshSlider);
+    clearInterval(refeshSlider);
+    refeshSlider = setInterval(function () {
+      next.click();
+    }, 5000);
   }
 
   // next left
@@ -43,9 +46,9 @@ jQuery(document).ready(function ($) {
   });
 
   // tự động chạy slider sau 5 giây
-  let refeshSlider = setTimeout(function () {
+  let refeshSlider = setInterval(function () {
     next.click();
-  }, 3000);
+  }, 5000);
 
   //=======================================================================
   // chức năng phân trang trong page shop
