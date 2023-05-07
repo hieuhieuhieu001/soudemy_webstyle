@@ -1,0 +1,228 @@
+/* pc screem */
+@media only screen and (min-width: 1024px) {
+    
+}
+/* tablet screen */
+@media screen and (min-width: 740px) and (max-width: 1023px){
+    .container{
+        max-width: 960px;
+        min-width: 960px;
+    }
+    /* home */
+    .slider{
+        max-width: 960px;
+    }
+    .slider-item{
+        max-width: 960px;
+    }
+    .slider-item img{
+        max-width: 960px;
+    }
+    .slider-item-title{
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 59px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    .slider-item-content{
+        max-width: 584px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        margin: 30px auto;
+    }
+    .product{
+        padding: 72px 0;
+        text-align: center;
+    }
+    .product__list{
+        gap: 15px;
+    }
+    .method-price__item__title > i{
+        font-size: 34px;
+        margin-right: 1rem;
+    }
+    .more_infomation_header{
+        /* justify-content: start; */
+        flex-wrap: wrap;
+        line-height: 16px;
+    }
+    /* shop */
+    #main .shop{
+        padding: 0 20px;
+    }
+     /* about */
+     .last_blog_post{
+        padding: 0 20px;
+    }
+    .evaluate{
+        padding: 0 20px;
+        display: block;
+        text-align: center;
+    }
+    .evaluate_left,.evaluate_right{
+        width: 100%;
+    }
+    .evaluate .evaluate_title{
+        width: 100%;
+    }
+    .evaluate .evaluate_content{
+        margin: 0 auto;
+    }
+    .container .related_product{
+        padding: 0 20px;
+    }
+}
+/* mobie screen */
+@media screen and (max-width: 739px){
+    .container{
+        max-width: 720px;
+        min-width: 720px;
+    }
+    #header{
+        display: none;
+    }
+    #mobibe-header{
+        display: block;
+    }
+    /* main home */
+    /* home */
+    .slider{
+        max-width: 720px;
+    }
+    .slider-item{
+        max-width: 720px;
+    }
+    .slider-item img{
+        max-width: 960px;
+    }
+    .slider-item-title{
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 59px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    .slider-item-content{
+        max-width: 584px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        margin: 30px auto;
+    }
+    .product{
+        padding: 72px 0;
+        text-align: center;
+    }
+    .product__list{
+        gap: 10px;
+    }
+    .product_boder{
+        display: block;
+    }
+    .product_boder_left,
+    .product_boder_right{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .product_boder_left{
+        width: 100%;
+        display: block;
+        padding: 0 20px;
+    }
+    .product_list_review{
+        grid-template-rows: 130px 130px 130px 130px;
+        margin: 0;
+    }
+    .more_infomation_header{
+        justify-content: start;
+    }
+    .more_infomation_title{
+        margin-right: 10px;
+    }
+    .main__list{
+        padding: 140px 20px;
+    }
+    .oder-now .oder-now__title{
+        font-size: 18px;
+    }
+    .method-price{
+        margin: 100px 10px;
+        /* display: block; */
+    }
+    .method-price__item__title > i{
+        font-size: 28px;
+        margin-right: 1rem;
+    }
+    .method-price__title{
+        font-size: 18px;
+    }
+    .method-price__content{
+        font-size: 12px;
+        
+     }
+    .suggestions__list{
+        padding: 50px 20px;
+    }
+    .time{
+        font-size: 18px;
+    }
+    .suggestion__title{
+        font-size: 20px;
+    }
+    /* css shop */
+    /* main responsive */
+    .category_bar-filter{
+        display: none;
+    }
+    #main .container{
+        /* padding: 50px 99px; */
+        display: block;
+    }
+    .category{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .container .related_product{
+        padding: 0 20px;
+    }
+
+    /* css blog */
+    .blog_bar-filter{
+        display: none;
+    }
+    .blog_boder_left{
+        flex: 1;
+        padding: 0 20px;
+    }
+    /* about */
+    .last_blog_post{
+        padding: 0 20px;
+    }
+    .evaluate{
+        padding: 0 20px;
+        display: block;
+        text-align: center;
+    }
+    .evaluate_left,.evaluate_right{
+        width: 100%;
+    }
+    .evaluate .evaluate_title{
+        width: 100%;
+    }
+    .evaluate .evaluate_content{
+        margin: 0 auto;
+    }
+    /* footer */
+    #footer .container{
+        padding: 36px 20px;
+    }
+    #footer .sub__list__content{
+        font-size: 14px;
+    }
+}

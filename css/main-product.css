@@ -135,7 +135,7 @@
     -o-transition: .5s;
     cursor: pointer;
 }
-.more_infomation_title:hover{
+.more_infomation_title:first-child{
     text-decoration: underline;
 }
 /* end */

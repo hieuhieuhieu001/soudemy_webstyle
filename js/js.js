@@ -1,6 +1,14 @@
-jQuery(document).ready(function ($) {
+document.addEventListener("DOMContentLoaded", () => {
   // opent register table
   $(".btn-user").on("click", function () {
+    $(".register-form").show();
+  });
+
+  $(".btn-bag").on("click", function () {
+    $(".register-form").show();
+  });
+
+  $(".btn-add-cart").on("click", function () {
     $(".register-form").show();
   });
 
@@ -8,6 +16,22 @@ jQuery(document).ready(function ($) {
     $(".register-form").hide();
   });
 
+  // register.html
+  // change singup form
+  $(".form .btn-signup").on("click", () => {
+    $(".form .select-register").css("transform", "translatex(-50%)");
+  });
+  // change singin form
+  $(".form .btn-signin").on("click", () => {
+    $(".form .select-register").css("transform", "translatex(0)");
+  });
+  //opent and exit navbar mobie
+  $(".btn-menu .btn-menu-open").on("click", function () {
+    $(".btn-menu .menu").css("transform", "unset");
+  });
+  $(".btn-menu .btn-menu-exit").on("click", function () {
+    $(".btn-menu .menu").css("transform", "translatex(-100%)");
+  });
   //======================= slider banner =====================================
   let sliderList = $(".slider .list-item");
   let item = $(".slider .list-item .slider-item");
@@ -21,10 +45,10 @@ jQuery(document).ready(function ($) {
     let checkLeft = item[count].offsetLeft;
     // offsetLeft đo vị trí của cạnh bên trái với lề
     sliderList.css("left", -checkLeft + "px");
-    clearInterval(refeshSlider);
-    refeshSlider = setInterval(function () {
-      next.click();
-    }, 5000);
+    // clearInterval(refeshSlider);
+    // refeshSlider = setInterval(function () {
+    //   next.click();
+    // }, 5000);
   }
 
   // next left
@@ -46,14 +70,14 @@ jQuery(document).ready(function ($) {
   });
 
   // tự động chạy slider sau 5 giây
-  let refeshSlider = setInterval(function () {
-    next.click();
-  }, 5000);
+  // let refeshSlider = setInterval(function () {
+  //   next.click();
+  // }, 5000);
 
   //=======================================================================
   // chức năng phân trang trong page shop
   let thisPage = 1; // Đại diên cho trang đầu tiên
-  let limit = 6; // Đại diện cho số sản phẩm tối đa trong 1 trang
+  let limit = 9; // Đại diện cho số sản phẩm tối đa trong 1 trang
   let list = $(".category_body .category_item"); // Lấy ra toàn bộ sản phẩm
 
   function loadItem() {
@@ -184,35 +208,35 @@ jQuery(document).ready(function ($) {
     });
   }
   filPrice();
-});
 
-//================================Add to cart====================================
-function countItemAdd() {
-  let count = 1; // khởi tạo biến count = 1
-  let btnAdd = $(".add_amount .add_item"); // gọi nút thêm item
-  let btnMinus = $(".add_amount .minus_item"); // gọi nút giảm item
-  let oddContent = $(".add_amount .amount_item"); // lấy thẻ chứa nội dung số lượng item
-  btnAdd.on("click", function () {
-    // tạo sự kiện click nút thêm
-    count++; // count tăng 1 đơn vị
-    let newContent = `<span>${count}</span>`; // gán lại biên count vào cấu trúc html mới
-    oddContent.html(newContent); // gán lại vào cấu trức html cũ
+  //================================Add to cart====================================
+  function countItemAdd() {
+    let count = 1; // khởi tạo biến count = 1
+    let btnAdd = $(".add_amount .add_item"); // gọi nút thêm item
+    let btnMinus = $(".add_amount .minus_item"); // gọi nút giảm item
+    let oddContent = $(".add_amount .amount_item"); // lấy thẻ chứa nội dung số lượng item
+    btnAdd.on("click", function () {
+      // tạo sự kiện click nút thêm
+      count++; // count tăng 1 đơn vị
+      let newContent = `<span>${count}</span>`; // gán lại biên count vào cấu trúc html mới
+      oddContent.html(newContent); // gán lại vào cấu trức html cũ
+    });
+    btnMinus.on("click", function () {
+      // tạo sự kiện click nút giảm
+      count--;
+      if (count < 1) {
+        // nếu count < 1 thì gán lại count = 1 để giá trị không bị trừ âm
+        count = 1;
+      }
+      let newContent = `<span>${count}</span>`;
+      oddContent.html(newContent);
+    });
+  }
+  countItemAdd();
+
+  $(".add_to_wishlist .btn_add_wishlist").on("click", function () {
+    $(this).toggleClass("btn_add_wishlist-active");
   });
-  btnMinus.on("click", function () {
-    // tạo sự kiện click nút giảm
-    count--;
-    if (count < 1) {
-      // nếu count < 1 thì gán lại count = 1 để giá trị không bị trừ âm
-      count = 1;
-    }
-    let newContent = `<span>${count}</span>`;
-    oddContent.html(newContent);
-  });
-}
-countItemAdd();
 
-$(".add_to_wishlist .btn_add_wishlist").on("click", function () {
-  $(this).toggleClass("btn_add_wishlist-active");
+  // function addCart() {};
 });
-
-function addCart() {}

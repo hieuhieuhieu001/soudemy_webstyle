@@ -81,6 +81,10 @@ p{
     min-width: 1200px;
     margin: 0 auto;
 }
-.background{
+.background-white{
+    width: 100%;
     background-color: #EFEFEF;
+}
+.background-black{
+    background-color: #2B2B2B;
 }

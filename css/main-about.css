@@ -75,7 +75,7 @@
 meets perfection */
 .evaluate{
     display: flex;
-    margin: 90px 0;
+    margin: 90px 20px;
 }
 .evaluate_left,
 .evaluate_right{
@@ -135,7 +135,7 @@ meets perfection */
 
 /* start css last blog post */
 .last_blog_post{
-    padding-bottom: 50px;
+    padding: 0 20px 50px;
 }
 .last_blog_post_header{
     display: flex;

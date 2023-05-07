@@ -1,20 +1,17 @@
-#footer{
-    padding: 36px 0;
-    background-color: #2B2B2B;
+#footer .container{
+    padding: 36px 67px;
     color: var(--title-color-white);
 }
 .footer__list{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
 }
-.footer__col{
-    width: calc(100%/4);
+.footer__col:nth-child(2),
+.footer__col:nth-child(3){
+    /* width: calc(100%/4); */
     text-align: center;
 }
 .footer__title{
     color: var(--title-color-white);
-}
-.sub__list__content{
-    padding: 0.25rem 0;
-    /* text-align: justify; */
 }
