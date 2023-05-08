@@ -16,6 +16,10 @@
     justify-content: space-between;
     /* padding: 10px 0; */
 }
+.navbar__list-left .navbar__item:first-child .navbar__link{
+	text-transform: uppercase;
+	text-decoration: none;
+}
 .navbar__link,
 .navbar__btn{
     padding: 35px 23px;

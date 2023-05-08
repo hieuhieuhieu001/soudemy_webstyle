@@ -1,3 +1,6 @@
+#footer{
+    background-color: #2B2B2B;
+}
 #footer .container{
     padding: 36px 67px;
     color: var(--title-color-white);

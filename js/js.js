@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let checkLeft = item[count].offsetLeft;
     // offsetLeft đo vị trí của cạnh bên trái với lề
     sliderList.css("left", -checkLeft + "px");
-    // clearInterval(refeshSlider);
-    // refeshSlider = setInterval(function () {
-    //   next.click();
-    // }, 5000);
+    clearInterval(refeshSlider);
+    refeshSlider = setInterval(function () {
+      next.click();
+    }, 5000);
   }
 
   // next left
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // tự động chạy slider sau 5 giây
-  // let refeshSlider = setInterval(function () {
-  //   next.click();
-  // }, 5000);
+  let refeshSlider = setInterval(function () {
+    next.click();
+  }, 5000);
 
   //=======================================================================
   // chức năng phân trang trong page shop
@@ -197,6 +197,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   searchItem();
+
+  // function search on mobie
+  function searchItemOnMb() {
+    // on("keyup") => nhận giá trị từ bàn phím
+    $("#mobibe-header .search-mb").on("keyup", function () {
+      let val = $(this).val(); // gán giá trị nhập từ bần phím vào biến
+      fillItem(val);
+    });
+  }
+  searchItemOnMb();
 
   // filPrice function
   function filPrice() {
