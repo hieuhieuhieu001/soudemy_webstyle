@@ -80,7 +80,7 @@
 @media screen and (max-width: 739px){
     .container{
         max-width: 720px;
-        min-width: 720px;
+        min-width: 540px;
     }
     #header{
         display: none;
