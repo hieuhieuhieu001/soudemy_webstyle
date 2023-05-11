@@ -183,6 +183,7 @@
     #main .container{
         /* padding: 50px 99px; */
         display: block;
+        padding: unset;
     }
     .category{
         width: 100%;

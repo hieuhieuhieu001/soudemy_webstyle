@@ -20,10 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // change singup form
   $(".form .btn-signup").on("click", () => {
     $(".form .select-register").css("transform", "translatex(-50%)");
+    $(".form-header .btn-signup").addClass("acctive");
+    $(".form-header .btn-signin").removeClass("acctive");
   });
   // change singin form
   $(".form .btn-signin").on("click", () => {
     $(".form .select-register").css("transform", "translatex(0)");
+    $(".form-header .btn-signin").addClass("acctive");
+    $(".form-header .btn-signup").removeClass("acctive");
   });
   //opent and exit navbar mobie
   $(".btn-menu .btn-menu-open").on("click", function () {

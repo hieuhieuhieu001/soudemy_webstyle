@@ -24,13 +24,16 @@ body{
 }
 .form-header .btn-signin,
 .form-header .btn-signup{
-    width: 273px;
+    max-width: 273px;
     padding: 10px 20px;
     border: none;
     background: none;
     color: white;
     font-weight: 900;
     font-size: 24px;
+}
+.acctive{
+    text-decoration: underline;
 }
 .form-body{
     width: 273px;
