@@ -56,6 +56,19 @@
 .category_item:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.item_footer .item_name{
+    display: block; /* Fallback trong trường hợp trình duyệt không hỗ trợ display dạng box */
+    display: -webkit-box;
+    line-height: 16px; /* Fallback  */
+    max-height: 74px; /* Fallback số dòng bạn muốn giới hạn */
+    -webkit-line-clamp: 1; /* Số dòng bạn muốn giới hạn */
+    -webkit-box-orient: vertical;
+    visibility: visible;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-width: 190px;
+    margin: 0 auto;
+}
 .category_footer{
     display: flex;
     justify-content: center;
