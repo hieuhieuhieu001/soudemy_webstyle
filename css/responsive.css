@@ -115,6 +115,9 @@
         color: #FFFFFF;
         margin: 30px auto;
     }
+    .btn__view-more{
+        padding: 19px 28px;
+    }
     .product{
         padding: 72px 0;
         text-align: center;
