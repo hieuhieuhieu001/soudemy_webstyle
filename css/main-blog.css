@@ -35,6 +35,11 @@
     color: #898989;
     border-right: 1px solid #898989;
 }
+.btn_like,
+.comment{
+    display: flex;
+    align-items: center;
+}
 .btn_like-heart,
 .btn_commnent{
     font-size: 18px;
